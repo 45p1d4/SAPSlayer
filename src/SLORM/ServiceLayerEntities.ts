@@ -1,16 +1,38 @@
-import { oInv } from './oInv.js'; // Importa los campos de la entidad Invoices
-import { OCRD } from './OCRD.js'; // Importa los campos de la entidad BusinessPartners
+import { oInv } from './oInv.js'; // Import fields for the Invoices entity
+import { OCRD } from './OCRD.js'; // Import fields for the BusinessPartners entity
+import { OPOR } from './OPOR'; // Import fields for the Purchase Orders entity
+import { OITM } from './OITM.js'; // Import fields for the Items entity
+import { OWHS } from './OWHS.js'; // Import fields for the Warehouses entity
+import { ITM1 } from './ITM1.js'; // Import fields for the Item Price Lists entity
+import { OCTG } from './OCTG.js'; // Import fields for the Payment Terms entity
+import { OHEM } from './OHEM.js'; // Import fields for the Employee Info entity
+import { OACT } from './OACT.js'; // Import fields for the Chart of Accounts entity
+import { OJDT } from './OJDT.js'; // Import fields for the Journal Entries entity
+import { JDT1 } from './JDT1.js'; // Import fields for the Journal Entry Lines entity
+import { ODLN } from './ODLN.js'; // Import fields for the Delivery Notes entity
+import { DLN1 } from './DLN1.js'; // Import fields for the Delivery Note Lines entity
+// import { OPDN } from './OPDN'; // Import fields for the Goods Receipts entity
+// import { PDN1 } from './PDN1'; // Import fields for the Goods Receipt Lines entity
+// import { OIGE } from './OIGE'; // Import fields for the Goods Issues entity
+// import { IGE1 } from './IGE1'; // Import fields for the Goods Issue Lines entity
+// import { OWOR } from './OWOR'; // Import fields for the Production Orders entity
+// import { OSTC } from './OSTC'; // Import fields for the Tax Codes entity
+// import { OBTN } from './OBTN'; // Import fields for the Batch Numbers entity
+// import { OSRN } from './OSRN'; // Import fields for the Serial Numbers entity
+// import { CUFD } from './CUFD'; // Import fields for the User Defined Fields entity
+// import { CUOT } from './CUOT'; // Import fields for the User Defined Objects entity
+
 /**
- * Service Layer Entities mapped to SAP Business One Tables.
+ * Service Layer Entities mapped to SAP Business One Tables (9.3 Schema).
  */
 export const ServiceLayerEntities = {
     /**
      * @description Represents customer invoice data.
-     * @sapTable OINV
+     * @sapTable OINV (SAP 9.3)
      */
     Invoices: {
       description: "Represents customer invoice data.",
-      sapTable: "OINV",
+      sapTable: "OINV",  // SAP 9.3 table name
       fields: oInv
     },
     /**
@@ -43,7 +65,7 @@ export const ServiceLayerEntities = {
      */
     BusinessPartners: {
       description: "Represents customers, suppliers, and leads.",
-      sapTable: "OCRD",
+      sapTable: "OCRD",  // SAP 9.3 table name
       fields: OCRD
     },
     /**
@@ -52,7 +74,7 @@ export const ServiceLayerEntities = {
      */
     Orders: {
       description: "Represents customer orders.",
-      sapTable: "ORDR",
+      sapTable: "ORDR",  // SAP 9.3 table name
     },
     /**
      * @description Represents details about order items.
@@ -68,7 +90,8 @@ export const ServiceLayerEntities = {
      */
     Items: {
       description: "Represents inventory items.",
-      sapTable: "OITM",
+      sapTable: "OITM",  // SAP 9.3 table name
+      fields: OITM
     },
     /**
      * @description Represents warehouses.
@@ -76,7 +99,8 @@ export const ServiceLayerEntities = {
      */
     Warehouses: {
       description: "Represents warehouses.",
-      sapTable: "OWHS",
+      sapTable: "OWHS",  // SAP 9.3 table name
+      fields: OWHS
     },
     /**
      * @description Represents item price lists.
@@ -84,7 +108,8 @@ export const ServiceLayerEntities = {
      */
     ItemPriceLists: {
       description: "Represents item price lists.",
-      sapTable: "ITM1",
+      sapTable: "ITM1",  // SAP 9.3 table name
+      fields: ITM1
     },
     /**
      * @description Represents payment terms.
@@ -92,7 +117,8 @@ export const ServiceLayerEntities = {
      */
     PaymentTerms: {
       description: "Represents payment terms.",
-      sapTable: "OCTG",
+      sapTable: "OCTG",  // SAP 9.3 table name
+      fields: OCTG
     },
     /**
      * @description Represents employee details.
@@ -100,7 +126,8 @@ export const ServiceLayerEntities = {
      */
     EmployeesInfo: {
       description: "Represents employee details.",
-      sapTable: "OHEM",
+      sapTable: "OHEM",  // SAP 9.3 table name
+      fields: OHEM
     },
     /**
      * @description Represents chart of accounts.
@@ -108,7 +135,8 @@ export const ServiceLayerEntities = {
      */
     ChartOfAccounts: {
       description: "Represents chart of accounts.",
-      sapTable: "OACT",
+      sapTable: "OACT",  // SAP 9.3 table name
+      fields: OACT
     },
     /**
      * @description Represents journal entries.
@@ -116,7 +144,8 @@ export const ServiceLayerEntities = {
      */
     JournalEntries: {
       description: "Represents journal entries.",
-      sapTable: "OJDT",
+      sapTable: "OJDT",  // SAP 9.3 table name
+      fields: OJDT
     },
     /**
      * @description Represents journal entry lines.
@@ -124,7 +153,8 @@ export const ServiceLayerEntities = {
      */
     JournalEntryLines: {
       description: "Represents journal entry lines.",
-      sapTable: "JDT1",
+      sapTable: "JDT1",  // SAP 9.3 table name
+      fields: JDT1
     },
     /**
      * @description Represents delivery notes.
@@ -132,7 +162,8 @@ export const ServiceLayerEntities = {
      */
     DeliveryNotes: {
       description: "Represents delivery notes.",
-      sapTable: "ODLN",
+      sapTable: "ODLN",  // SAP 9.3 table name
+      fields: ODLN
     },
     /**
      * @description Represents details about delivery note items.
@@ -140,7 +171,8 @@ export const ServiceLayerEntities = {
      */
     DeliveryNoteLines: {
       description: "Represents details about delivery note items.",
-      sapTable: "DLN1",
+      sapTable: "DLN1",  // SAP 9.3 table name
+      fields: DLN1
     },
     /**
      * @description Represents goods receipts for purchase orders.
@@ -148,7 +180,8 @@ export const ServiceLayerEntities = {
      */
     GoodsReceipts: {
       description: "Represents goods receipts for purchase orders.",
-      sapTable: "OPDN",
+      sapTable: "OPDN",  // SAP 9.3 table name
+      fields: ""
     },
     /**
      * @description Represents details about goods receipt items.
@@ -156,7 +189,8 @@ export const ServiceLayerEntities = {
      */
     GoodsReceiptLines: {
       description: "Represents details about goods receipt items.",
-      sapTable: "PDN1",
+      sapTable: "PDN1",  // SAP 9.3 table name
+      fields: ""
     },
     /**
      * @description Represents goods issues.
@@ -164,7 +198,8 @@ export const ServiceLayerEntities = {
      */
     GoodsIssues: {
       description: "Represents goods issues.",
-      sapTable: "OIGE",
+      sapTable: "OIGE",  // SAP 9.3 table name
+      fields: ""
     },
     /**
      * @description Represents details about goods issue items.
@@ -172,7 +207,8 @@ export const ServiceLayerEntities = {
      */
     GoodsIssueLines: {
       description: "Represents details about goods issue items.",
-      sapTable: "IGE1",
+      sapTable: "IGE1",  // SAP 9.3 table name
+      fields: ""
     },
     /**
      * @description Represents production orders.
@@ -180,7 +216,8 @@ export const ServiceLayerEntities = {
      */
     ProductionOrders: {
       description: "Represents production orders.",
-      sapTable: "OWOR",
+      sapTable: "OWOR",  // SAP 9.3 table name
+      fields: ""
     },
     /**
      * @description Represents tax rate definitions.
@@ -188,7 +225,8 @@ export const ServiceLayerEntities = {
      */
     TaxCodes: {
       description: "Represents tax rate definitions.",
-      sapTable: "OSTC",
+      sapTable: "OSTC",  // SAP 9.3 table name
+      fields: ""
     },
     /**
      * @description Represents batch numbers for inventory items.
@@ -196,7 +234,8 @@ export const ServiceLayerEntities = {
      */
     BatchNumbers: {
       description: "Represents batch numbers for inventory items.",
-      sapTable: "OBTN",
+      sapTable: "OBTN",  // SAP 9.3 table name
+      fields: ""
     },
     /**
      * @description Represents serial numbers for inventory items.
@@ -204,25 +243,27 @@ export const ServiceLayerEntities = {
      */
     SerialNumbers: {
       description: "Represents serial numbers for inventory items.",
-      sapTable: "OSRN",
+      sapTable: "OSRN",  // SAP 9.3 table name
+      fields: ""
     },
     /**
-     * @description Represents user-defined fields.
+     * @description Represents user-defined fields in SAP.
      * @sapTable CUFD
      */
     UserDefinedFields: {
-      description: "Represents user-defined fields.",
-      sapTable: "CUFD",
+      description: "Represents user-defined fields in SAP.",
+      sapTable: "CUFD",  // SAP 9.3 table name
+      fields: ""
     },
     /**
-     * @description Represents user-defined objects.
+     * @description Represents user-defined objects in SAP.
      * @sapTable CUOT
      */
     UserDefinedObjects: {
-      description: "Represents user-defined objects.",
-      sapTable: "CUOT",
-    },
-  };
-  
-  export default ServiceLayerEntities;
-  
+      description: "Represents user-defined objects in SAP.",
+      sapTable: "CUOT",  // SAP 9.3 table name
+      fields: ""
+    }
+};
+
+export default ServiceLayerEntities;

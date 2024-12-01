@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import SAPSlayer from './SAPSlayer.js';
-import ServiceLayerEntities from './ServiceLayerEntities.js';
+import ServiceLayerEntities from './SLORM/ServiceLayerEntities.js';
 
 type ServiceLayerEntityKeys = keyof typeof ServiceLayerEntities;
 
@@ -58,7 +58,7 @@ async function listBusinessPartners(): Promise<void> {
     // Aquí se pasa el nombre de la entidad y los parámetros de filtro y select
     const url = 'BusinessPartners';
     const selectFields = [BusinessPartnersFields.CardCode, BusinessPartnersFields.CardName, BusinessPartnersFields.CardType];
-    const filterClause = `startswith(CardCode, 'P')`;  // Puedes hacer más dinámico si lo deseas, dependiendo de los requisitos
+    const filterClause = ``;  // Puedes hacer más dinámico si lo deseas, dependiendo de los requisitos
 
     const businessPartners = await sap.get(url, {
       select: selectFields,  // Se pasa el select dinámicamente
